@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>响应式容器2</title>
+	<meta name="viewport" content="width=device-width">
+
+	<style type="text/css">
+		*{
+			margin: ;
+			padding: 0;
+		}
+		.container{
+			margin:0 auto;
+			background: pink;
+			height: 100px;
+		}
+		@media screen and (max-width:768px){
+			.container{
+				width: 100%;
+				
+			}
+		}
+		@media screen and (min-width:768px) and (max-width:992px){
+			.container{
+				width: 750px;
+				
+			}
+		}
+		@media screen  and (min-width:992px)  and (max-width:1200px) {
+			.container{
+				width:970px;
+			}
+		}
+		@media screen and (min-width:1200px){
+			.container{
+				width: 1170px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container"></div>
+</body>
+<!-- <script type="text/javascript">
+	(function(win,doc){
+		var oContainer = doc.querySelector('.container');
+		function resize(){
+			var iWidth = doc.body.clientWidth || doc.documentElement.clientWidth;
+			if(iWidth > 1200){
+				oContainer.style.width = '1170px';
+			}else if(iWidth > 992){
+				oContainer.style.width = '970px';
+
+			}else if(iWidth > 768){
+				oContainer.style.width = '750px';
+
+			}else{
+				oContainer.style.width = '100%';
+
+			}
+		}
+		win.addEventListener('resize',resize,false);
+		doc.addEventListener('DOMContainerLoaded',resize,false);
+	})(window,document)
+</script> -->
+</html>
